@@ -52,5 +52,9 @@ void stringCopy(char* in, char* out) {
 
 //question 2
 void reverse(char* string, int size) {
-
+    for (int i = 0; i < size / 2; i++) {
+        char temp = string[i];
+        string[i] = string[size - i - 1];
+        string[size - i - 1] = temp;
+    }
 }
