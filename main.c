@@ -39,9 +39,13 @@ int main(void) {
 
     //letter that will be used to find the amount of times its in the string
     char letter = 'l';
-    printf("Letter we are looking for the amount of occruances that are in the string: %c", letter);
+    printf("Letter we are looking for the amount of occruances that are in the string: '%c'\n", letter);
 
+    //answer
     int occurence = count(string2, letter);
+    printf("Number of times '%c' was in \"%s\": %d\n", letter, string2, occurence);
+    seperator(4);
+
 
     //number 4, print the contents of an array of ints
     //number 5, sum the contents of an array of ints
@@ -79,6 +83,15 @@ void reverse(char* string, int size) {
 //question 3
 int count(char* string, char letter) {
    int occurence = 0;
+
+   //loops through the whole string
+    int i = 0;
+    while (string[i] != '\0') {
+        if (string[i] == letter) {
+            occurence++;
+        }
+        i++;
+    }
 
     return occurence;
 }
