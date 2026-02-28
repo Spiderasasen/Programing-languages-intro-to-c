@@ -11,6 +11,7 @@ void stringCopy(char* in, char* out);
 void reverse(char* string, int size);
 int count(char* string, char letter);
 void printArray(int array[], int size);
+int addAll(int* array, int size);
 
 int main(void) {
     seperator(1);
@@ -55,6 +56,13 @@ int main(void) {
     seperator(5);
 
     //number 5, sum the contents of an array of ints
+    int  array1[5] = {6, -7, 8, -9, 10};
+    printf("getting the sum of the all the ints in this array:\n");
+    printArray(array1, 5);
+
+    //answer
+    int sum = addAll(array1, 5);
+
     //number 6, make an array of ints, where negative numbers comes first then positive (in order)
     return 0;
 }
@@ -111,3 +119,6 @@ void printArray(int array[], int size) {
     }
     printf("\n");
 }
+
+//question 5
+int addAll(int* array, int size) {}
