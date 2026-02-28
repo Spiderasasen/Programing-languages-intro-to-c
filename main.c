@@ -12,6 +12,7 @@ void reverse(char* string, int size);
 int count(char* string, char letter);
 void printArray(int array[], int size);
 int addAll(int* array, int size);
+void negFirst(int input[], int size, int output[]);
 
 int main(void) {
     seperator(1);
@@ -56,7 +57,7 @@ int main(void) {
     seperator(5);
 
     //number 5, sum the contents of an array of ints
-    int  array1[5] = {6, -7, 8, -9, 10};
+    int  array1[5] = {1, -2, 3, -4, 5};
     printf("getting the sum of the all the ints in this array:\n");
     printArray(array1, 5);
 
@@ -66,6 +67,10 @@ int main(void) {
     seperator(6);
 
     //number 6, make an array of ints, where negative numbers comes first then positive (in order)
+    int array2[5] = {1, -2, 3, -4, 5};
+    printf("Placing the negative number first, then the positive.\niIn this array:\n");
+    printArray(array2, 5);
+
     return 0;
 }
 
@@ -139,4 +144,9 @@ int addAll(int* array, int size) {
         i++;
     }
     return answer;
+}
+
+//question 6
+void negFirst(int input[], int size, int output[]) {
+
 }
