@@ -66,10 +66,14 @@ int main(void) {
     printf("Final answer: %d", sum);
     seperator(6);
 
-    //number 6, make an array of ints, where negative numbers comes first then positive (in order)
+    //number 6, make an array of ints, where negative numbers comes first then positive
     int array2[5] = {1, -2, 3, -4, 5};
-    printf("Placing the negative number first, then the positive.\niIn this array:\n");
+    int* array3= malloc(sizeof(int)*5);
+    printf("Placing the negative number first, then the positive.\nIn this array:\n");
     printArray(array2, 5);
+
+    //answer
+    negFirst(array2, 5, array3);
 
     return 0;
 }
@@ -149,4 +153,24 @@ int addAll(int* array, int size) {
 //question 6
 void negFirst(int input[], int size, int output[]) {
 
+    //looping though and placing all negative numbers first
+    int negIndex = 0;
+    for (int i = 0; i < size; i++) {
+        if (input[i] < 0) {
+            output[negIndex] = input[i];
+            negIndex++;
+        }
+    }
+
+    //looping to place all the positive number now
+    int posIndex = negIndex;
+    for (int i = 0; i < size; i++) {
+        if (input[i] >= 0) {
+            output[posIndex] = input[i];
+            posIndex++;
+        }
+    }
+
+    printf("New array:\n");
+    printArray(output, size);
 }
