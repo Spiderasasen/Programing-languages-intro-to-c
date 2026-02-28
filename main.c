@@ -10,6 +10,7 @@ void seperator();
 void stringCopy(char* in, char* out);
 void reverse(char* string, int size);
 int count(char* string, char letter);
+void printArray(int array[], int size);
 
 int main(void) {
     seperator(1);
@@ -46,8 +47,13 @@ int main(void) {
     printf("Number of times '%c' was in \"%s\": %d\n", letter, string2, occurence);
     seperator(4);
 
-
     //number 4, print the contents of an array of ints
+    int array[5] = {1, -2, 3, -4, 5};
+    printf("Printing an array of intergers\n");
+    //answer
+    printArray(array, 5);
+    seperator(5);
+
     //number 5, sum the contents of an array of ints
     //number 6, make an array of ints, where negative numbers comes first then positive (in order)
     return 0;
@@ -94,4 +100,14 @@ int count(char* string, char letter) {
     }
 
     return occurence;
+}
+
+//question 4
+void printArray(int array[], int size) {
+    int i = 0;
+    while (i < size) {
+        printf("%d \t", array[i]);
+        i++;
+    }
+    printf("\n");
 }
