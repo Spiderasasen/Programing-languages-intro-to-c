@@ -7,7 +7,7 @@
 
 /*FUNCTIONS FOR ALL QUESTIONS GET CALLED HERE*/
 void stringCopy(char* in, char* out);
-
+void reverse(char* string, int size);
 
 int main(void) {
     //number 1, copying a string
@@ -36,4 +36,9 @@ void stringCopy(char* in, char* out) {
     for (int i = 0; in[i] != '\0'; i++) {
         out[i] = in[i];
     }
+}
+
+//question 2
+void reverse(char* string, int size) {
+
 }
