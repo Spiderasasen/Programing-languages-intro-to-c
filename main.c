@@ -62,6 +62,7 @@ int main(void) {
 
     //answer
     int sum = addAll(array1, 5);
+    printf("Final answer: %d", sum);
 
     //number 6, make an array of ints, where negative numbers comes first then positive (in order)
     return 0;
@@ -121,4 +122,14 @@ void printArray(int array[], int size) {
 }
 
 //question 5
-int addAll(int* array, int size) {}
+int addAll(int* array, int size) {
+    int answer = 0;
+
+    //looping though the array
+    int i = 0;
+    while (i < size) {
+        answer += array[i];
+        i++;
+    }
+    return answer;
+}
