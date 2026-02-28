@@ -63,6 +63,7 @@ int main(void) {
     //answer
     int sum = addAll(array1, 5);
     printf("Final answer: %d", sum);
+    seperator(6);
 
     //number 6, make an array of ints, where negative numbers comes first then positive (in order)
     return 0;
@@ -73,7 +74,13 @@ int main(void) {
 
 //sepreating the questions
 void seperator(int question_number) {
-    printf("\n|************* Question %d *************|\n", question_number);
+    //checking if the question number is 6
+    if (question_number == 6) {
+        printf("\n|************* Final Question *************|\n");
+    }
+    else {
+        printf("\n|************* Question %d *************|\n", question_number);
+    }
 }
 
 //question 1
