@@ -9,6 +9,7 @@
 void seperator();
 void stringCopy(char* in, char* out);
 void reverse(char* string, int size);
+int count(char* string, char letter);
 
 int main(void) {
     seperator(1);
@@ -33,6 +34,15 @@ int main(void) {
     seperator(3);
 
     //number 3, Counting the number of times of a given number in a string
+    char* string2 = "Help me Please";
+    printf("Original string: %s\n", string2);
+
+    //letter that will be used to find the amount of times its in the string
+    char letter = 'l';
+    printf("Letter we are looking for the amount of occruances that are in the string: %c", letter);
+
+    int occurence = count(string2, letter);
+
     //number 4, print the contents of an array of ints
     //number 5, sum the contents of an array of ints
     //number 6, make an array of ints, where negative numbers comes first then positive (in order)
@@ -64,4 +74,11 @@ void reverse(char* string, int size) {
         string[i] = string[size - i - 1];
         string[size - i - 1] = temp;
     }
+}
+
+//question 3
+int count(char* string, char letter) {
+   int occurence = 0;
+
+    return occurence;
 }
